@@ -4,7 +4,7 @@
 	<groupId>rome</groupId>
 	<artifactId>rome</artifactId>
 	<name>ROME, RSS and atOM utilitiEs for Java</name>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<description>All Roads Lead to ROME. ROME is a set of Atom/RSS Java utilities that make it
 		easy to work in Java with most syndication formats. Today it accepts all flavors of RSS
