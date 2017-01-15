@@ -4,7 +4,7 @@
 	<groupId>rome</groupId>
 	<artifactId>rome</artifactId>
 	<name>ROME, RSS and atOM utilitiEs for Java</name>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<description>All Roads Lead to ROME. ROME is a set of Atom/RSS Java utilities that make it
 		easy to work in Java with most syndication formats. Today it accepts all flavors of RSS
@@ -14,31 +14,13 @@
 		are either specific for the format you want to work with, or a generic normalized
 		SyndFeed object that lets you work on with the data without bothering about the
 		underlying format. </description>
-	<url>https://rome.dev.java.net/</url>
-	<issueManagement>
-		<url>https://rome.dev.java.net/servlets/ProjectIssues</url>
-	</issueManagement>
-	<ciManagement>
-		<notifiers>
-			<notifier>
-				<configuration>
-					<address>dev@rome.dev.java.net</address>
-				</configuration>
-			</notifier>
-		</notifiers>
-	</ciManagement>
 	<inceptionYear>2004</inceptionYear>
-	<mailingLists>
-		<mailingList>
-			<name>dev@rome.dev.java.net</name>
-			<subscribe>
-				https://rome.dev.java.net/servlets/ProjectMailingListList</subscribe>
-			<unsubscribe>
-				https://rome.dev.java.net/servlets/ProjectMailingListList</unsubscribe>
-			<archive>
-				https://rome.dev.java.net/servlets/SummarizeList?listName=dev</archive>
-		</mailingList>
-	</mailingLists>
+	<scm>
+		<connection>scm:git:https://github.com/kaloyan-raev/rome.git</connection>
+		<developerConnection>scm:git:git@github.com:kaloyan-raev/rome.git</developerConnection>
+		<url>https://github.com/kaloyan-raev/rome</url>
+		<tag>HEAD</tag>
+	</scm>
 	<developers>
 		<developer>
 			<name>Alejandro Abdelnur</name>
@@ -55,23 +37,10 @@
 			<timezone>-9</timezone>
 		</developer>
 	</developers>
-	<scm>
-		<connection>
-			scm:cvs:pserver:guest@cvs.dev.java.net:/cvs:rome</connection>
-		<url>https://rome.dev.java.net/source/browse/rome/</url>
-	</scm>
 	<organization>
 		<name>Sun Microsystems</name>
 		<url>http://java.sun.com/</url>
 	</organization>
-	<repositories>
-		<repository>
-			<id>maven2-repository.dev.java.net</id>
-			<name>Java.net Repository for Maven</name>
-			<url>http://download.java.net/maven/2/</url>
-		</repository>
-	</repositories>
-	
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<sourceDirectory>src/java</sourceDirectory>
@@ -166,26 +135,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
-			<!-- plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin-->			
 		</plugins>
-		<extensions>
-			<extension>
-				<groupId>org.jvnet.wagon-svn</groupId>
-				<artifactId>wagon-svn</artifactId>
-				<version>RELEASE</version>
-			</extension>
-		</extensions>		
 	</build>
 	<dependencies>
 		<dependency>
@@ -200,20 +150,10 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<reporting>
-		<plugins>
-			<plugin>
-				<artifactId>maven-changes-plugin</artifactId>
-				<configuration>
-					<xmlPath>${basedir}/xdocs/changes.xml</xmlPath>
-				</configuration>
-			</plugin>
-		</plugins>
-	</reporting>
 	<distributionManagement>
 		<repository>
-			<id>java.net-m2-repository</id>
-			<url>java-net:/maven2-repository/trunk/repository/</url>
+			<id>bintray</id>
+			<url>https://api.bintray.com/maven/kaloyan-raev/maven/rome/;publish=1</url>
 		</repository>		
 	</distributionManagement>
 </project>
